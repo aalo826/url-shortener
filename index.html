@@ -11,13 +11,16 @@
   <nav>
     <ul>
       <li><img src="./assets/logo.svg" alt="Shortly Logo"></li>
-      <li>Features</li>
-      <li>Pricing</li>
-      <li>Resources</li>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Resources</a></li>
     </ul>
     <ul>
-      <li>Login</li>
-      <li>Sign Up</li>
+      <li><a href="#">Login</a></li>
+      <ul class="sign-up">
+        <li><a href="#">Sign Up</a></li>
+      </ul>
+
     </ul>
   </nav>
   <header>
@@ -38,10 +41,8 @@
       <input type="text" placeholder="Shorten a link here.."name="url" id="url-input">
       <input type="submit" value="Shorten It!" id="url-submit">
     </form>
-    <div class="url-container">
-      <ul id="short-url">
+    <div id="url-container">
         <!-- Append API URL into this div and display -->
-      </ul>
     </div>
   </section>
   <section class="advanced-stats">

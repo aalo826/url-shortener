@@ -9,12 +9,12 @@ urlApp.getUserInput = function () {
     const urlData = document.getElementById('url-input').value;
 
     // console.log(urlInput);
-    urlApp.shorten(urlData);
+    urlApp.shortenUrl(urlData);
   })
 }
 
 
-urlApp.shorten = function (query) {
+urlApp.shortenUrl = function (query) {
   const url = (`https://api.shrtco.de/v2/shorten?url=${query}`);
 
   fetch(url)
@@ -22,9 +22,25 @@ urlApp.shorten = function (query) {
     return data.json();
   })
   .then(function (jsonData) {
-    jsonData.result.full_short_link;
-    console.log(jsonData.result.full_short_link);
+    urlApp.displayUrl(jsonData);
   })
+}
+
+urlApp.displayUrl = function (data) {
+  console.log(data.result.full_short_link);
+
+  // document.querySelector("#url-container").innerHTML = "";
+  const url = document.createElement('li')
+  url.innerHTML = data.result.full_short_link;
+
+
+  // appending
+  const ul = document.createElement("ul");
+  ul.classList.add("short-url");
+
+  ul.appendChild(url);
+
+  document.querySelector("#url-container").appendChild(ul);
 }
 
 urlApp.init = function () {

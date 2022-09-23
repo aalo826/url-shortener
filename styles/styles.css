@@ -284,6 +284,70 @@ a, a:visited, a:active {
   color: inherit;
 }
 
+li {
+  list-style: none;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-top: 30px;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+nav li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 0px 30px 0px;
+  text-align: center;
+  color: hsl(257deg, 7%, 63%);
+}
+nav li a:hover {
+  color: hsl(255deg, 11%, 22%);
+}
+
+.sign-up li:hover {
+  background-color: hsl(180deg, 66%, 49%);
+  -webkit-box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.5);
+          box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.5);
+  color: white;
+  cursor: pointer;
+}
+
+.sign-up li {
+  color: white;
+  background-color: hsl(180deg, 66%, 49%);
+  border-radius: 50px;
+  padding: 10px 25px 10px;
+}
+.sign-up li a:hover {
+  color: white;
+}
+
 footer {
   background-color: hsl(260deg, 8%, 14%);
 }
