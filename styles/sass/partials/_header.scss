@@ -1,0 +1,28 @@
+header {
+  padding-top: 150px;
+}
+
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+.header-content {
+  min-width: 50%;
+}
+
+.header-img {
+  min-width: 40%;
+}
+
+header h1 {
+  color: $very-dark-blue;
+}
+
+.header-content p {
+  color: $gray;
+  width: 80%;
+  padding-bottom: 40px;
+}
