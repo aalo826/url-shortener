@@ -249,7 +249,7 @@ h1 h2 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
 }
 
 h3 {
@@ -266,17 +266,23 @@ a {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1, h2, h3, h4, ul, li {
+  margin: 0px;
+  padding: 0px;
 }
 
 .wrapper {
   width: 85%;
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -288,13 +294,36 @@ li {
   list-style: none;
 }
 
+.bubble {
+  width: 28%;
+}
+.bubble a:hover {
+  background-color: hsl(180deg, 66%, 49%);
+  -webkit-box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.5);
+          box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.bubble a {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-color: hsl(180deg, 66%, 49%);
+  border-radius: 50px;
+  margin: 0px;
+  padding: 17px 0px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 30px;
 }
 
@@ -322,7 +351,7 @@ nav li {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  padding: 0px 30px 0px;
+  padding: 0px 20px 0px;
   text-align: center;
   color: hsl(257deg, 7%, 63%);
 }
@@ -342,10 +371,49 @@ nav li a:hover {
   color: white;
   background-color: hsl(180deg, 66%, 49%);
   border-radius: 50px;
-  padding: 10px 25px 10px;
+  padding: 0px;
 }
 .sign-up li a:hover {
   color: white;
+}
+
+.sign-up li a {
+  margin: 0px;
+  padding: 10px 25px 10px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  padding-top: 150px;
+}
+
+header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-content {
+  min-width: 50%;
+}
+
+.header-img {
+  min-width: 40%;
+}
+
+header h1 {
+  color: hsl(255deg, 11%, 22%);
+}
+
+.header-content p {
+  color: hsl(0deg, 0%, 75%);
+  width: 80%;
+  padding-bottom: 40px;
 }
 
 footer {

@@ -1,14 +1,19 @@
 //general styles
 * {
-	margin: 0;
-	padding: 0;
+	margin: 0px;
+	padding: 0px;
 }
 
+h1, h2, h3, h4, ul, li{
+  margin: 0px;
+  padding: 0px;
+}
 .wrapper {
 	width: 85%;
-	max-width: 1200px;
+	max-width: 1440px;
 	margin: 0 auto;
 }
+
 
 a, a:visited, a:active {
   color: inherit;
@@ -16,4 +21,27 @@ a, a:visited, a:active {
 
 li {
   list-style: none;
+}
+
+.bubble {
+  width: 28%;
+
+  a:hover{
+    background-color: $cyan;
+    box-shadow:inset 0 0 0 100px rgba(255,255,255,0.5);
+    cursor: pointer;
+  }
+}
+
+.bubble a{
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-color: $cyan;
+  border-radius: 50px;
+  margin: 0px;
+  padding: 17px 0px;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
