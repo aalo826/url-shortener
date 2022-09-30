@@ -2,13 +2,13 @@
 const urlApp = {};
 
 urlApp.getUserInput = function () {
-  document.querySelector("#url-submit").addEventListener
-
+  document.querySelector("#url-shorten").addEventListener
   ("click", function (event) {
+
+    console.log("it worked")
     event.preventDefault();
     const urlData = document.getElementById('url-input').value;
 
-    // console.log(urlInput);
     urlApp.shortenUrl(urlData);
   })
 }

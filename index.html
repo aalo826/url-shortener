@@ -40,16 +40,18 @@
       </div>
     </div>
   </header>
-  <section class="url-short">
-    <form action="submit">
-      <label for="url" aria-label="Enter URL"></label>
-      <input type="text" placeholder="Shorten a link here.."name="url" id="url-input">
-      <input type="submit" value="Shorten It!" id="url-submit">
-    </form>
-    <div id="url-container">
-        <!-- Append API URL into this div and display -->
+  <section class="url-shortener">
+    <div class="wrapper">
+      <form action="submit">
+        <input type="text" placeholder="Shorten a link here.."name="url" id="url-input">
+        <input type="button" value="Shorten It!" id="url-shorten">
+      </form>
+      <div id="url-container">
+          <!-- Append API URL into this div and display -->
+      </div>
     </div>
   </section>
+  <!-- Advanced Statistics -->
   <section class="advanced-stats">
     <div class="wrapper">
       <h2>Advanced Statistics</h2>

@@ -419,3 +419,47 @@ header h1 {
 footer {
   background-color: hsl(260deg, 8%, 14%);
 }
+
+.url-shortener .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  background-color: hsl(257deg, 27%, 26%);
+  background-image: url(../assets/bg-shorten-desktop.svg);
+  background-size: cover;
+  height: 8rem;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+}
+
+.url-shortener form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.url-shortener #url-input {
+  width: 77.5%;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0px 25px 0px;
+}
+
+.url-shortener #url-shorten {
+  width: 12.5%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.advanced-stats {
+  background-color: #f0f1f6;
+  padding-top: 10rem;
+}
