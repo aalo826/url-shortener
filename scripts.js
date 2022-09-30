@@ -9,7 +9,6 @@ urlApp.getUserInput = function () {
     event.preventDefault();
     const urlData = document.getElementById('url-input').value;
 
-    console.log(urlInput);
     urlApp.shortenUrl(urlData);
   })
 }

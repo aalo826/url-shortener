@@ -446,14 +446,14 @@ footer {
           justify-content: center;
 }
 
-.url-shortener #link {
+.url-shortener #url-input {
   width: 77.5%;
   padding: 10px;
   border-radius: 10px;
   margin: 0px 25px 0px;
 }
 
-.url-shortener #shorten {
+.url-shortener #url-shorten {
   width: 12.5%;
   padding: 10px;
   border-radius: 10px;
