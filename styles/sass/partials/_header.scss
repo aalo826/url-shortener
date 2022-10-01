@@ -5,8 +5,6 @@ header {
 header .wrapper {
   display: flex;
   justify-content: space-between;
-
-
 }
 
 .header-content {
@@ -17,12 +15,8 @@ header .wrapper {
   min-width: 40%;
 }
 
-header h1 {
-  color: $very-dark-blue;
-}
-
 .header-content p {
-  color: $gray;
+  font-size: 1.25rem;
   width: 80%;
   padding-bottom: 40px;
 }
