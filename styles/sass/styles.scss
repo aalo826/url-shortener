@@ -1,13 +1,17 @@
 // Font
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 
-// Partials
+// Base Styles
 @import "./partials/setup";
 @import "./partials/variables";
-@import "./partials/typography";
 @import "./partials/baseStyles";
+@import "./partials/typography";
+
+// Styling Content
 @import "./partials/nav";
 @import "./partials/header";
-@import "./partials/footer";
 @import "./partials/urlShortener";
 @import "./partials/advancedStats";
+@import "./partials/boost";
+@import "./partials/footer";
+
