@@ -2,3 +2,87 @@
   background-color: $light-gray;
   padding-top: 10rem;
 }
+
+.advanced-stats .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.advanced-stats h2{
+  padding-bottom: 5px;
+}
+
+.advanced-stats p {
+  width: 50%;
+  text-align: center;
+}
+
+.stats-container::before {
+  content: "";
+  width: 75%;
+  height: 8px;
+  left: 10%;
+  top: 43%;
+  background-color: $cyan;
+  position: absolute;
+  z-index: 0;
+}
+
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-top: 100px;
+}
+
+.stats-container p{
+  width: 100%;
+  color: $gray-violet;
+}
+
+.stats-container p {
+  text-align: start;
+}
+
+.stats-container img {
+  max-width: 40px;
+  max-height: 40px;
+}
+.stats-1, .stats-2, .stats-3 {
+  background-color: white;
+  width: 30%;
+  border-radius: 3%;
+  margin-right: 30px;
+  margin-bottom: 100px;
+  height: 100%;
+  z-index: 1;
+}
+
+.stats-1, .stats-2, .stats-3, h3 p{
+  padding: 10px 30px 70px 30px;
+}
+
+.stat-img {
+  margin-top: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  transform: translate(0%, -50%);
+  background-color: $dark-violet;
+  padding: 15px 35px;
+  border-radius: 50%;
+}
+
+
+.stats-2 {
+  margin-top: 50px;
+}
+
+.stats-3 {
+  margin-top: 100px;
+}
+
