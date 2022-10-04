@@ -336,6 +336,7 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 30px;
+  font-weight: 700;
 }
 
 nav ul {
@@ -368,6 +369,10 @@ nav li {
 }
 nav li a:hover {
   color: hsl(255deg, 11%, 22%);
+}
+
+nav a {
+  font-size: 0.95rem;
 }
 
 .sign-up li:hover {
@@ -427,9 +432,13 @@ header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   border-radius: 10px;
   background-color: hsl(257deg, 27%, 26%);
   background-image: url(../assets/bg-shorten-desktop.svg);
@@ -449,17 +458,60 @@ header .wrapper {
           justify-content: center;
 }
 
-.url-shortener #url-input {
+.url-input-style {
+  font: "Poppins";
+  color: hsl(255deg, 11%, 22%);
   width: 77.5%;
-  padding: 10px;
   border-radius: 10px;
-  margin: 0px 25px 0px;
+  margin: 50px 25px 0px;
+  padding: 15px 15px 15px 30px;
 }
 
-.url-shortener #url-shorten {
-  width: 12.5%;
-  padding: 10px;
+.url-input-error-style {
+  font: "Poppins";
+  color: hsl(0deg, 87%, 67%);
+  width: 77.5%;
   border-radius: 10px;
+  margin: 50px 25px 0px;
+  padding: 15px 15px 15px 30px;
+  border: 2px solid hsl(0deg, 87%, 67%);
+}
+
+.url-shorten-style {
+  font: "Poppins";
+  font-weight: 700;
+  color: white;
+  background-color: hsl(180deg, 66%, 49%);
+  border: none;
+  width: 12.5%;
+  border-radius: 10px;
+  margin: 50px 25px 0px;
+  padding: 10px;
+}
+.url-shorten-style a:hover {
+  background-color: hsl(180deg, 66%, 49%);
+  -webkit-box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.5);
+          box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.url-shorten-style:hover {
+  background-color: hsl(180deg, 66%, 49%);
+  -webkit-box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.5);
+          box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+#error-msg {
+  display: none;
+  color: hsl(0deg, 87%, 67%);
+  padding-left: 45px;
+}
+#error-msg p {
+  padding-top: 4px;
+  font-style: italic;
+  color: hsl(0deg, 87%, 67%);
+  font-size: 0.8rem;
 }
 
 .advanced-stats {
