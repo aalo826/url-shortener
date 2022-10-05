@@ -17,19 +17,38 @@ urlApp.getUserInput = function () {
 urlApp.shortenUrl = function (query) {
   const url = (`https://api.shrtco.de/v2/shorten?url=${query}`);
 
+  const errorMsg = document.getElementById("error-msg");
+
   fetch(url)
   .then(function (data) {
-    return data.json();
+    if (data.ok === true) {
+      // hides error message
+      errorMsg.style.display = "none";
+      // Changing style of div to no errors
+      document.getElementById("url-input").className = "url-input-style";
+
+      return data.json();
+
+    } else if (data.ok === false) {
+      // shows error message
+      errorMsg.style.display = "block";
+      // Changing style of div to errors occured.
+      document.getElementById("url-input").className = "url-input-error-style";
+
+      throw new Error("User didn't input a valid website");
+    }
   })
   .then(function (jsonData) {
-    urlApp.displayUrl(jsonData);
+  urlApp.displayUrl(jsonData);
+  })
+  .catch((err) => {
+    console.log(err)
   })
 }
 
 urlApp.displayUrl = function (data) {
   console.log(data.result.full_short_link);
 
-  // document.querySelector("#url-container").innerHTML = "";
   const url = document.createElement('li')
   url.innerHTML = data.result.full_short_link;
 

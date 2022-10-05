@@ -1,6 +1,7 @@
 .url-shortener .wrapper {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   border-radius: 10px;
   background-color: $dark-violet;
   background-image: url(../assets/bg-shorten-desktop.svg);
@@ -14,16 +15,58 @@
   display: flex;
   justify-content: center;
 }
-
-.url-shortener #url-input {
+// default styling for input form
+.url-input-style {
+  font: $mainFont;
+  color: $very-dark-blue;
   width:77.5%;
-  padding: 10px;
   border-radius: 10px;
-  margin: 0px 25px 0px;
+  margin: 50px 25px 0px;
+  padding: 15px 15px 15px 30px;
 }
 
-.url-shortener #url-shorten {
-  width: 12.5%;
-  padding: 10px;
+// error styling for input form
+.url-input-error-style {
+  font: $mainFont;
+  color: $red;
+  width:77.5%;
   border-radius: 10px;
+  margin: 50px 25px 0px;
+  padding: 15px 15px 15px 30px;
+  border: 2px solid $red;
+}
+.url-shorten-style {
+  font: $mainFont;
+  font-weight: 700;
+  color: white;
+  background-color: $cyan;
+  border: none;
+  width: 12.5%;
+  border-radius: 10px;
+  margin: 50px 25px 0px;
+  padding: 10px;
+    a:hover{
+    background-color: $cyan;
+    box-shadow:inset 0 0 0 100px rgba(255,255,255,0.5);
+    cursor: pointer;
+  }
+}
+
+.url-shorten-style:hover{
+  background-color: $cyan;
+  box-shadow:inset 0 0 0 100px rgba(255,255,255,0.5);
+  cursor: pointer;
+}
+
+#error-msg {
+  display: none;
+  color: $red;
+  padding-left: 45px;
+
+  p {
+    padding-top: 4px;
+    font-style: italic;
+    color: $red;
+    font-size:0.8rem;
+  }
 }
