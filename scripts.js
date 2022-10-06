@@ -13,7 +13,7 @@ urlApp.getUserInput = function () {
   })
 }
 
-
+// Grabbing API Data
 urlApp.shortenUrl = function (query) {
   const url = (`https://api.shrtco.de/v2/shorten?url=${query}`);
 
@@ -46,18 +46,31 @@ urlApp.shortenUrl = function (query) {
   })
 }
 
+// Appending data to the webpage
 urlApp.displayUrl = function (data) {
-  console.log(data.result.full_short_link);
+  console.log(data)
 
-  const url = document.createElement('li')
-  url.innerHTML = data.result.full_short_link;
+  const shortenUrl = document.createElement('li');
+  shortenUrl.innerHTML = data.result.full_short_link;
 
+  const shortCopy = document.createElement('ul');
+  shortCopy.classList.add('short-copy')
+
+  const url = document.createElement('li');
+  url.innerHTML = data.result.original_link;
+
+  const copyButton = document.createElement('li');
+  copyButton.classList.add("copy-button");
+  copyButton.innerHTML = `Copy`;
 
   // appending
   const ul = document.createElement("ul");
   ul.classList.add("short-url");
 
   ul.appendChild(url);
+  ul.appendChild(shortCopy);
+  shortCopy.appendChild(shortenUrl);
+  shortCopy.appendChild(copyButton);
 
   document.querySelector("#url-container").appendChild(ul);
 }
