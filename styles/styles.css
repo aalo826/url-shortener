@@ -570,6 +570,21 @@ header .wrapper {
   cursor: pointer;
 }
 
+.copied-button {
+  color: white;
+  background-color: hsl(255deg, 11%, 22%);
+  margin-left: 25px;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 15px 35px;
+}
+
+.copied-button:hover {
+  cursor: pointer;
+}
+
 .advanced-stats {
   background-color: #f0f1f6;
   padding-top: 10rem;

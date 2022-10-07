@@ -60,8 +60,9 @@ urlApp.displayUrl = function (data) {
   url.innerHTML = data.result.original_link;
 
   const copyButton = document.createElement('li');
-  copyButton.classList.add("copy-button");
+  copyButton.classList.add ('copy-button');
   copyButton.innerHTML = `Copy`;
+
 
   // appending
   const ul = document.createElement("ul");
@@ -73,7 +74,35 @@ urlApp.displayUrl = function (data) {
   shortCopy.appendChild(copyButton);
 
   document.querySelector("#url-container").appendChild(ul);
+
+  urlApp.copyFunction(shortenUrl.textContent);
 }
+
+urlApp.copyFunction = function (shortenUrl) {
+  const copiedList = document.getElementsByClassName("copy-button");
+  const copied = copiedList[0];
+  copied.addEventListener("click", copyLink);
+
+  function copyLink() {
+    const copyButtonClass = document.getElementsByClassName("short-url");
+    navigator.clipboard.writeText(copyButtonClass);
+
+    console.log(copied);
+
+    setTimeout(copiedMsg, 0)
+    setTimeout(copyMsg, 2000)
+
+    function copiedMsg () {
+      copied.classList.replace("copy-button", "copied-button");
+      copied.innerHTML = `Copied!`;
+    }
+
+    function copyMsg() {
+      copied.classList.replace("copied-button", "copy-button");
+      copied.innerHTML = `Copy`;
+    }
+  }
+};
 
 urlApp.init = function () {
   console.log("init successs")
