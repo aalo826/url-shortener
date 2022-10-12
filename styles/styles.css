@@ -296,6 +296,16 @@ p {
 }
 
 html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
   font-size: 112.5%;
   font-family: "Poppins";
   overflow-x: hidden;
@@ -458,21 +468,31 @@ header .wrapper {
           justify-content: center;
 }
 
+.input-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin: 50px 25px 0px;
+}
+
 .url-input-style {
   font: "Poppins";
   color: hsl(255deg, 11%, 22%);
-  width: 77.5%;
+  width: 100%;
   border-radius: 10px;
-  margin: 50px 25px 0px;
   padding: 15px 15px 15px 30px;
 }
 
 .url-input-error-style {
   font: "Poppins";
   color: hsl(0deg, 87%, 67%);
-  width: 77.5%;
+  width: 100%;
   border-radius: 10px;
-  margin: 50px 25px 0px;
   padding: 15px 15px 15px 30px;
   border: 2px solid hsl(0deg, 87%, 67%);
 }
@@ -483,10 +503,11 @@ header .wrapper {
   color: white;
   background-color: hsl(180deg, 66%, 49%);
   border: none;
-  width: 12.5%;
+  width: 18%;
+  height: 43%;
   border-radius: 10px;
-  margin: 50px 25px 0px;
-  padding: 10px;
+  padding: 15px;
+  margin: 50px 60px 0px 0px;
 }
 
 .url-shorten-style:hover {
@@ -497,9 +518,8 @@ header .wrapper {
 }
 
 #error-msg {
-  display: none;
+  visibility: hidden;
   color: hsl(0deg, 87%, 67%);
-  padding-left: 45px;
 }
 #error-msg p {
   padding-top: 4px;
@@ -786,4 +806,89 @@ footer li {
 
 .social-box a {
   color: white;
+}
+
+@media (max-width: 1180px) {
+  header .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 100px;
+  }
+  .header-content h1, .header-content p {
+    text-align: center;
+    width: 75%;
+    padding-bottom: 35px;
+  }
+}
+@media (max-width: 960px) {
+  header .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .url-shortener form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 50px;
+  }
+  .url-shortener .wrapper {
+    height: 100%;
+  }
+  .input-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .input-block {
+    width: 90%;
+  }
+  .url-shorten-style {
+    width: 90%;
+    margin: 0;
+  }
+  #error-msg p {
+    padding: 5px 0px 25px 0px;
+  }
 }

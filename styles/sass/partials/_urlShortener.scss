@@ -15,13 +15,21 @@
   display: flex;
   justify-content: center;
 }
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 50px 25px 0px;
+}
+
+
 // default styling for input form
 .url-input-style {
   font: $mainFont;
   color: $very-dark-blue;
-  width:77.5%;
+  width:100%;
   border-radius: 10px;
-  margin: 50px 25px 0px;
   padding: 15px 15px 15px 30px;
 }
 
@@ -29,22 +37,23 @@
 .url-input-error-style {
   font: $mainFont;
   color: $red;
-  width:77.5%;
+  width: 100%;
   border-radius: 10px;
-  margin: 50px 25px 0px;
   padding: 15px 15px 15px 30px;
   border: 2px solid $red;
 }
+
 .url-shorten-style {
   font: $mainFont;
   font-weight: 700;
   color: white;
   background-color: $cyan;
   border: none;
-  width: 12.5%;
+  width: 18%;
+  height: 43%;
   border-radius: 10px;
-  margin: 50px 25px 0px;
-  padding: 10px;
+  padding: 15px;
+  margin: 50px 60px 0px 0px;
 }
 
 .url-shorten-style:hover{
@@ -54,9 +63,8 @@
 }
 
 #error-msg {
-  display: none;
+  visibility: hidden;
   color: $red;
-  padding-left: 45px;
 
   p {
     padding-top: 4px;

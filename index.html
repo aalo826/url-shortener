@@ -44,12 +44,12 @@
   <section class="url-shortener">
     <div class="wrapper">
       <form action="submit">
-        <input type="text" placeholder="Shorten a link here.."name="url" id="url-input" class="url-input-style">
+        <div class="input-block">
+          <input type="text" placeholder="Shorten a link here.."name="url" id="url-input" class="url-input-style">
+          <em id="error-msg"><p>Please enter a valid link</p></em>
+        </div>
         <input type="button" value="Shorten It!" id="url-shorten" class ="url-shorten-style">
       </form>
-      <div id="error-msg">
-        <p>Please enter a valid link</p>
-      </div>
     </div>
   </section>
   <!-- Advanced Statistics -->
