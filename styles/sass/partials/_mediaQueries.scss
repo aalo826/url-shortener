@@ -1,0 +1,246 @@
+@media (max-width: 1180px) {
+    header .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+      h1, p{
+      text-align: center;
+      width: 75%;
+      padding-bottom: 35px;
+    }
+  }
+
+}
+
+
+@media (max-width: 960px) {
+
+    .wrapper{
+      width: 90%;
+    }
+
+    header .wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .url-shortener form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 50px;
+    }
+
+    .url-shortener .wrapper {
+      height: 100%;
+    }
+
+    .input-block {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    .input-block {
+      width: 90%;
+    }
+
+
+    .url-shorten-style {
+      width: 90%;
+      margin: 0;
+    }
+
+    #error-msg p{
+      padding: 5px 0px 25px 0px;
+    }
+
+    .advanced-stats {
+      padding-top: 15rem;
+    }
+
+    .stats-container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      p {
+        width: 70%;
+      }
+    }
+
+    .stats-1, .stats-2, .stats-3 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      margin-top: 0px;
+      margin-bottom: 100px;
+      margin-right: 0px;
+      padding: 80px 0px 80px 0px;
+      width: 100%;
+      h3, p {
+        text-align: center;
+      }
+    }
+
+    .stat-img {
+      width: 5%;
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .stats-container::after{
+      height: 55%;
+      width: 8px;
+      bottom: 10%;
+      left: 49.5%;
+      top: 16%;
+    }
+
+    .boost .bubble  {
+    width: 40%;
+    }
+
+    footer .wrapper {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .footer-logo {
+      margin-bottom: 20px;
+    }
+
+    .socials {
+      margin-top: 50px;
+    }
+
+    .social-box:last-child{
+      padding-right: 0px;
+    }
+  }
+
+  @media (max-width: 760px) {
+    header {
+      padding-top: 30px;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+    }
+
+    header .wrapper {
+      flex-direction: column-reverse;
+    }
+
+    .header-img {
+      display: flex;
+      justify-content: center;
+      transform: translate(10%,0%);
+      img {
+        max-width: 100%;
+      }
+    }
+    .boost .bubble  {
+      width: 35%;
+    }
+
+    .short-url {
+      display: block;
+      text-align: start;
+      padding: 20px 0px;
+    }
+
+    .short-url li {
+      border-bottom: 2px solid $light-gray;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      text-indent: 25px;
+    }
+
+    .short-copy {
+      display: block;
+      text-align: start;
+      padding: 0px 25px;
+    }
+
+    .short-copy li {
+      border: none;
+      text-indent: 0px;
+    }
+
+    .short-copy li:last-child {
+      margin-bottom: 0px;
+    }
+
+    .copy-button {
+      margin-left: 0px;
+    }
+  }
+
+  @media (max-width: 585px) {
+    header h1 {
+      font-size: 2.8rem;
+    }
+
+    .header-img {
+      display: flex;
+      justify-content: center;
+      transform: translate(20%,0%);
+        img {
+          max-width: 530px;
+        }
+    }
+
+    .advanced-stats .wrapper {
+      text-align: center;
+    }
+
+    .advanced-stats p {
+      width: 90%;
+    }
+
+    .boost .wrapper {
+      text-align: center;
+    }
+
+    .boost .bubble  {
+      width: 65%;
+    }
+
+    .header-content .bubble  {
+      width: 38%;
+    }
+  }
+
+
+  @media (max-width: 400px) {
+    header h1 {
+      font-size: 2.3rem;
+    }
+
+    .boost .bubble  {
+      width: 65%;
+    }
+
+    .header-img {
+      display: flex;
+      justify-content: center;
+      transform: translate(20%,0%);
+      img {
+        max-width: 400px;
+      }
+    }
+  }
+

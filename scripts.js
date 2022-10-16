@@ -23,7 +23,7 @@ urlApp.shortenUrl = function (query) {
   .then(function (data) {
     if (data.ok === true) {
       // hides error message
-      errorMsg.style.display = "none";
+      errorMsg.style.visibility = "hidden";
       // Changing style of div to no errors
       document.getElementById("url-input").className = "url-input-style";
 
@@ -31,7 +31,7 @@ urlApp.shortenUrl = function (query) {
 
     } else if (data.ok === false) {
       // shows error message
-      errorMsg.style.display = "block";
+      errorMsg.style.visibility = "visible";
       // Changing style of div to errors occured.
       document.getElementById("url-input").className = "url-input-error-style";
 
@@ -60,8 +60,9 @@ urlApp.displayUrl = function (data) {
   url.innerHTML = data.result.original_link;
 
   const copyButton = document.createElement('li');
-  copyButton.classList.add("copy-button");
+  copyButton.classList.add ('copy-button');
   copyButton.innerHTML = `Copy`;
+
 
   // appending
   const ul = document.createElement("ul");
@@ -73,7 +74,50 @@ urlApp.displayUrl = function (data) {
   shortCopy.appendChild(copyButton);
 
   document.querySelector("#url-container").appendChild(ul);
+
+  urlApp.copyFunction(shortenUrl.textContent);
 }
+
+urlApp.copyFunction = function (shortenUrl) {
+  const copied = document.getElementsByClassName("copy-button");
+
+  console.log(copied);
+
+  for (var i=0; i < copied.length; i++) {
+    copied[i].addEventListener('click', copyLink)
+  }
+
+
+
+
+  // copied.addEventListener("click", copyLink);
+
+  function copyLink() {
+    const copied = document.getElementsByClassName("copy-button");
+    const copyButtonClass = document.getElementsByClassName("short-url");
+
+    navigator.clipboard.writeText(copyButtonClass);
+
+    console.log(copied);
+
+    setTimeout(copiedMsg, 0)
+    setTimeout(copyMsg, 2000)
+
+    function copiedMsg () {
+      for (var i = 0; i < copied.length; i++) {
+        copied[i].classList.replace("copy-button", "copied-button");
+        copied[i].innerHTML = `Copied!`;
+      }
+    }
+
+    function copyMsg() {
+      for (var i = 0; i < copied.length; i++) {
+        copied[i].classList.replace("copied-button", "copy-button");
+        copied.innerHTML = `Copy`;
+      }
+    }
+  }
+};
 
 urlApp.init = function () {
   console.log("init successs")

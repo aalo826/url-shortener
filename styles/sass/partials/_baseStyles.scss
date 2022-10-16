@@ -57,3 +57,10 @@ h4 {
 p {
   color: $gray-violet;
 }
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
