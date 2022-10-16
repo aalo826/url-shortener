@@ -17,99 +17,118 @@
       padding-bottom: 35px;
     }
   }
+
 }
 
 
 @media (max-width: 960px) {
 
-  .wrapper{
-    width: 90%;
-  }
-
-  header .wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .url-shortener form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 50px;
-  }
-
-  .url-shortener .wrapper {
-    // transform: translate(0, 0%);
-    height: 100%;
-  }
-
-  .input-block {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  }
-
-  .input-block {
-    width: 90%;
-  }
-
-
-  .url-shorten-style {
-    width: 90%;
-    margin: 0;
-  }
-
-  #error-msg p{
-    padding: 5px 0px 25px 0px;
-  }
-
-  .advanced-stats {
-    padding-top: 15rem;
-  }
-
-  .stats-container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    p {
-      width: 70%;
+    .wrapper{
+      width: 90%;
     }
-  }
 
-  .stats-1, .stats-2, .stats-3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    margin-top: 0px;
-    margin-bottom: 100px;
-    margin-right: 0px;
-    padding: 80px 0px 80px 0px;
-    width: 100%;
-    h3, p {
+    header .wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .url-shortener form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 50px;
+    }
+
+    .url-shortener .wrapper {
+      height: 100%;
+    }
+
+    .input-block {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    .input-block {
+      width: 90%;
+    }
+
+
+    .url-shorten-style {
+      width: 90%;
+      margin: 0;
+    }
+
+    #error-msg p{
+      padding: 5px 0px 25px 0px;
+    }
+
+    .advanced-stats {
+      padding-top: 15rem;
+    }
+
+    .stats-container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      p {
+        width: 70%;
+      }
+    }
+
+    .stats-1, .stats-2, .stats-3 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      margin-top: 0px;
+      margin-bottom: 100px;
+      margin-right: 0px;
+      padding: 80px 0px 80px 0px;
+      width: 100%;
+      h3, p {
+        text-align: center;
+      }
+    }
+
+    .stat-img {
+      width: 5%;
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .stats-container::after{
+      height: 55%;
+      width: 8px;
+      bottom: 10%;
+      left: 49.5%;
+      top: 16%;
+    }
+
+    .boost .bubble  {
+    width: 40%;
+    }
+
+    footer .wrapper {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
     }
-  }
 
-  .stat-img {
-    width: 5%;
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+    .footer-logo {
+      margin-bottom: 20px;
+    }
 
-  .stats-container::after{
-    height: 55%;
-    width: 8px;
-    bottom: 10%;
-    left: 49.5%;
-    top: 16%;
-  }
+    .socials {
+      margin-top: 50px;
+    }
 
-  .boost .bubble  {
-  width: 40%;
-  }
+    .social-box:last-child{
+      padding-right: 0px;
+    }
   }
 
   @media (max-width: 760px) {
@@ -135,6 +154,38 @@
     }
     .boost .bubble  {
       width: 35%;
+    }
+
+    .short-url {
+      display: block;
+      text-align: start;
+      padding: 20px 0px;
+    }
+
+    .short-url li {
+      border-bottom: 2px solid $light-gray;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      text-indent: 25px;
+    }
+
+    .short-copy {
+      display: block;
+      text-align: start;
+      padding: 0px 25px;
+    }
+
+    .short-copy li {
+      border: none;
+      text-indent: 0px;
+    }
+
+    .short-copy li:last-child {
+      margin-bottom: 0px;
+    }
+
+    .copy-button {
+      margin-left: 0px;
     }
   }
 
@@ -165,7 +216,11 @@
     }
 
     .boost .bubble  {
-      width: 55%;
+      width: 65%;
+    }
+
+    .header-content .bubble  {
+      width: 38%;
     }
   }
 
