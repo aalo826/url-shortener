@@ -57,3 +57,48 @@ nav a {
   height: 100%;
 }
 
+// mobile navigation
+.mobile-nav {
+  display: flex;
+}
+
+#nav-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $dark-violet;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.nav-content-1, .nav-content-2 {
+  display: flex;
+  flex-direction: column;
+  li {
+    color: white;
+  }
+}
+
+.nav-content-1 {
+  margin-top: 30px;
+  width: 90%;
+}
+
+.nav-content-1 li {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.nav-content-1 li:last-child {
+  border-bottom: 1px solid $gray-violet;
+  padding-bottom: 30px;
+}
+
+.nav-content-2 {
+  width: 80%;
+}
+.nav-content-2 li {
+  margin-bottom: 30px;
+  width: 100%;
+}

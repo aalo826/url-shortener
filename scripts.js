@@ -16,7 +16,6 @@ urlApp.getUserInput = function () {
 // Grabbing API Data
 urlApp.shortenUrl = function (query) {
   const url = (`https://api.shrtco.de/v2/shorten?url=${query}`);
-
   const errorMsg = document.getElementById("error-msg");
 
   fetch(url)
@@ -119,8 +118,28 @@ urlApp.copyFunction = function (shortenUrl) {
   }
 };
 
+urlApp.hamburgerMenu = function () {
+
+  const navContent = document.getElementById("nav-content")
+  navContent.style.visibility = "hidden"
+
+  document.querySelector("#hamburger-dropdown").addEventListener
+  ("click", function (event) {
+
+    if (navContent.style.visibility === "hidden") {
+      navContent.style.visibility = "visible";
+
+    } else if (navContent.style.visibility === "visible") {
+      navContent.style.visibility = "hidden";
+    }
+
+  })
+
+}
+
 urlApp.init = function () {
   console.log("init successs")
+  urlApp.hamburgerMenu();
   urlApp.getUserInput();
 }
 
