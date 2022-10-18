@@ -60,16 +60,24 @@ nav a {
 // mobile navigation
 .mobile-nav {
   display: flex;
+  position: relative;
+}
+
+#hamburger-dropdown:hover{
+  cursor: pointer;
 }
 
 #nav-content {
   display: flex;
+  position: absolute;
+  top: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: $dark-violet;
   width: 100%;
   border-radius: 10px;
+  z-index: 1;
 }
 
 .nav-content-1, .nav-content-2 {
@@ -80,6 +88,7 @@ nav a {
   }
 }
 
+
 .nav-content-1 {
   margin-top: 30px;
   width: 90%;
@@ -88,6 +97,7 @@ nav a {
 .nav-content-1 li {
   width: 100%;
   margin-bottom: 30px;
+    background-color: $dark-violet;
 }
 
 .nav-content-1 li:last-child {
@@ -101,4 +111,5 @@ nav a {
 .nav-content-2 li {
   margin-bottom: 30px;
   width: 100%;
+    background-color: $dark-violet;
 }

@@ -119,20 +119,47 @@ urlApp.copyFunction = function (shortenUrl) {
 };
 
 urlApp.hamburgerMenu = function () {
-
   const navContent = document.getElementById("nav-content")
+  const page = document.querySelector("*")
   navContent.style.visibility = "hidden"
+  navContent.style.left = "120%"
 
+
+  // Hamburger Dropdown
   document.querySelector("#hamburger-dropdown").addEventListener
   ("click", function (event) {
-
+    // sliding in animation for hamburger menu
+    if (navContent.style.left === "120%") {
+      navContent.style.left = "0%";
+      page.style.overflow = "hidden";
+      document.querySelector("#nav-content").style.transition = "ease-in 0.5s";
+    } else if (navContent.style.left === "0%") {
+      navContent.style.left = "120%";
+      page.style.overflow = "scroll";
+      document.querySelector("#nav-content").style.transition = "ease-in 0.5s";
+    }
+    // hides and shows the element
     if (navContent.style.visibility === "hidden") {
       navContent.style.visibility = "visible";
-
     } else if (navContent.style.visibility === "visible") {
       navContent.style.visibility = "hidden";
     }
+  })
 
+  // Targets all anchors in navigation
+  const navContentOne = document.getElementsByClassName("nav-anchor");
+  // Makes all anchors into an array
+  const anchorArray = [].slice.call(navContentOne)
+  // For each loop through the array to attach event listeners to all anchors
+  anchorArray.forEach((li) => {
+    li.addEventListener ('click', () => {
+      // removes hamburger menu if any of the list items are clicked
+      if (navContent.style.left === "0%") {
+        navContent.style.left = "120%";
+        navContent.style.visibility = "hidden";
+        page.style.overflow = "scroll";
+      }
+    })
   })
 
 }

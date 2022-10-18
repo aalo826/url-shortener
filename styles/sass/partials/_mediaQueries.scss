@@ -157,6 +157,15 @@
       width: 100%;
     }
 
+    .sign-up li{
+      color: white;
+      background-color: $cyan;
+      border-radius: 50px;
+      padding: 0px;
+        a:hover{
+          color: white;
+        }
+    }
     nav li a:hover {
       color: $gray-violet;
     }
@@ -271,5 +280,7 @@
         max-width: 400px;
       }
     }
+
+
   }
 

@@ -415,12 +415,19 @@ nav a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+}
+
+#hamburger-dropdown:hover {
+  cursor: pointer;
 }
 
 #nav-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: absolute;
+  top: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -434,6 +441,7 @@ nav a {
   background-color: hsl(257deg, 27%, 26%);
   width: 100%;
   border-radius: 10px;
+  z-index: 1;
 }
 
 .nav-content-1, .nav-content-2 {
@@ -457,6 +465,7 @@ nav a {
 .nav-content-1 li {
   width: 100%;
   margin-bottom: 30px;
+  background-color: hsl(257deg, 27%, 26%);
 }
 
 .nav-content-1 li:last-child {
@@ -471,6 +480,7 @@ nav a {
 .nav-content-2 li {
   margin-bottom: 30px;
   width: 100%;
+  background-color: hsl(257deg, 27%, 26%);
 }
 
 header {
@@ -1067,6 +1077,15 @@ footer li {
   }
   .sign-up {
     width: 100%;
+  }
+  .sign-up li {
+    color: white;
+    background-color: hsl(180deg, 66%, 49%);
+    border-radius: 50px;
+    padding: 0px;
+  }
+  .sign-up li a:hover {
+    color: white;
   }
   nav li a:hover {
     color: hsl(257deg, 7%, 63%);
