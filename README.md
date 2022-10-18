@@ -1,6 +1,6 @@
 # url-shortener
 
-<div align="center">
+<div>
   <h1>
     <a href="https://url-shorterner-alo.netlify.app/" color="white">Live</a>
     <span> | </span>
