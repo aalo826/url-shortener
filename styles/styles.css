@@ -411,6 +411,78 @@ nav a {
   height: 100%;
 }
 
+.mobile-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+#hamburger-dropdown:hover {
+  cursor: pointer;
+}
+
+#nav-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: hsl(257deg, 27%, 26%);
+  width: 100%;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.nav-content-1, .nav-content-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.nav-content-1 li, .nav-content-2 li {
+  color: white;
+}
+
+.nav-content-1 {
+  margin-top: 30px;
+  width: 90%;
+}
+
+.nav-content-1 li {
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: hsl(257deg, 27%, 26%);
+}
+
+.nav-content-1 li:last-child {
+  border-bottom: 1px solid hsl(257deg, 7%, 63%);
+  padding-bottom: 30px;
+}
+
+.nav-content-2 {
+  width: 80%;
+}
+
+.nav-content-2 li {
+  margin-bottom: 30px;
+  width: 100%;
+  background-color: hsl(257deg, 27%, 26%);
+}
+
 header {
   padding-top: 150px;
 }
@@ -842,6 +914,9 @@ footer li {
     width: 75%;
     padding-bottom: 35px;
   }
+  .mobile-nav {
+    display: none;
+  }
 }
 @media (max-width: 960px) {
   .wrapper {
@@ -975,6 +1050,46 @@ footer li {
   }
 }
 @media (max-width: 760px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav {
+    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  .sign-up {
+    width: 100%;
+  }
+  .sign-up li {
+    color: white;
+    background-color: hsl(180deg, 66%, 49%);
+    border-radius: 50px;
+    padding: 0px;
+  }
+  .sign-up li a:hover {
+    color: white;
+  }
+  nav li a:hover {
+    color: hsl(257deg, 7%, 63%);
+  }
   header {
     padding-top: 30px;
   }

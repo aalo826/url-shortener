@@ -18,6 +18,10 @@
     }
   }
 
+  .mobile-nav {
+    display: none;
+  }
+
 }
 
 
@@ -132,6 +136,40 @@
   }
 
   @media (max-width: 760px) {
+    // mobile navigation
+    .desktop-nav {
+      display: none;
+    }
+    .mobile-nav {
+      visibility: visible;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .nav-box {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .sign-up {
+      width: 100%;
+    }
+
+    .sign-up li{
+      color: white;
+      background-color: $cyan;
+      border-radius: 50px;
+      padding: 0px;
+        a:hover{
+          color: white;
+        }
+    }
+    nav li a:hover {
+      color: $gray-violet;
+    }
+    // header
     header {
       padding-top: 30px;
     }
@@ -242,5 +280,7 @@
         max-width: 400px;
       }
     }
+
+
   }
 
