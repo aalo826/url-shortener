@@ -146,6 +146,8 @@ urlApp.hamburgerMenu = function () {
     }
   })
 
+
+
   // Targets all anchors in navigation
   const navContentOne = document.getElementsByClassName("nav-anchor");
   // Makes all anchors into an array

@@ -412,9 +412,7 @@ nav a {
 }
 
 .mobile-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   position: relative;
 }
 
