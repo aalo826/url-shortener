@@ -47,7 +47,8 @@ urlApp.shortenUrl = function (query) {
 
 // Appending data to the webpage
 urlApp.displayUrl = function (data) {
-  console.log(data)
+  // Targets the input form
+  const form = document.querySelector("#form-submit");
 
   const shortenUrl = document.createElement('li');
   shortenUrl.innerHTML = data.result.full_short_link;
@@ -61,6 +62,7 @@ urlApp.displayUrl = function (data) {
   const copyButton = document.createElement('li');
   copyButton.classList.add ('copy-button');
   copyButton.innerHTML = `Copy`;
+  copyButton.addEventListener('click', copyFunction);
 
 
   // appending
@@ -74,49 +76,27 @@ urlApp.displayUrl = function (data) {
 
   document.querySelector("#url-container").appendChild(ul);
 
-  urlApp.copyFunction(shortenUrl.textContent);
+  function copyFunction() {
+    const copied = data.result.short_link;
+    navigator.clipboard.writeText(copied).then( () => {
+      setTimeout(copiedMsg, 0)
+      setTimeout(copyMsg, 2000)
+
+      function copiedMsg () {
+        copyButton.classList.replace("copy-button", "copied-button");
+        copyButton.innerHTML = `Copied!`;
+      }
+
+      function copyMsg() {
+        copyButton.classList.replace("copied-button", "copy-button");
+        copyButton.innerHTML = `Copy`;
+      }
+    });
+  }
+
+  // clears inupt field
+  form.reset();
 }
-
-urlApp.copyFunction = function (shortenUrl) {
-  const copied = document.getElementsByClassName("copy-button");
-
-  console.log(copied);
-
-  for (var i=0; i < copied.length; i++) {
-    copied[i].addEventListener('click', copyLink)
-  }
-
-
-
-
-  // copied.addEventListener("click", copyLink);
-
-  function copyLink() {
-    const copied = document.getElementsByClassName("copy-button");
-    const copyButtonClass = document.getElementsByClassName("short-url");
-
-    navigator.clipboard.writeText(copyButtonClass);
-
-    console.log(copied);
-
-    setTimeout(copiedMsg, 0)
-    setTimeout(copyMsg, 2000)
-
-    function copiedMsg () {
-      for (var i = 0; i < copied.length; i++) {
-        copied[i].classList.replace("copy-button", "copied-button");
-        copied[i].innerHTML = `Copied!`;
-      }
-    }
-
-    function copyMsg() {
-      for (var i = 0; i < copied.length; i++) {
-        copied[i].classList.replace("copied-button", "copy-button");
-        copied.innerHTML = `Copy`;
-      }
-    }
-  }
-};
 
 urlApp.hamburgerMenu = function () {
   const navContent = document.getElementById("nav-content")
