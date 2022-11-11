@@ -1,4 +1,5 @@
-<img src="https://github.com/aalo826/url-shortener/tree/main/assets/url-short.jpg">
+![url-short](https://user-images.githubusercontent.com/91832748/201399244-4091170c-6581-4a4b-9d8b-33d62096a9b4.jpg)
+
 
 # URL shortener API
 
