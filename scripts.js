@@ -50,15 +50,19 @@ urlApp.displayUrl = function (data) {
   // Targets the input form
   const form = document.querySelector("#form-submit");
 
+  // Full short link of URL
   const shortenUrl = document.createElement('li');
   shortenUrl.innerHTML = data.result.full_short_link;
 
+  // Container holding Copy button and shortened Link
   const shortCopy = document.createElement('ul');
   shortCopy.classList.add('short-copy')
 
+  // Shorten Link
   const url = document.createElement('li');
   url.innerHTML = data.result.original_link;
 
+  // Copy Button
   const copyButton = document.createElement('li');
   copyButton.classList.add ('copy-button');
   copyButton.innerHTML = `Copy`;
