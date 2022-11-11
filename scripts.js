@@ -62,7 +62,6 @@ urlApp.displayUrl = function (data) {
   const copyButton = document.createElement('li');
   copyButton.classList.add ('copy-button');
   copyButton.innerHTML = `Copy`;
-  copyButton.addEventListener('click', copyFunction);
 
 
   // appending
@@ -75,6 +74,10 @@ urlApp.displayUrl = function (data) {
   shortCopy.appendChild(copyButton);
 
   document.querySelector("#url-container").appendChild(ul);
+
+
+  // Click Event for when the Copy Button is clicked
+  copyButton.addEventListener('click', copyFunction);
 
   function copyFunction() {
     const copied = data.result.short_link;
